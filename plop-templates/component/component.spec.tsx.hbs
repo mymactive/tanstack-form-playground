@@ -1,0 +1,10 @@
+import { setup, screen } from "@/lib/testing-library";
+import { {{pascalCase name}} } from ".";
+
+test('renders {{pascalCase name}} component', () => {
+  setup(<{{pascalCase name}} />);
+
+  const titleElement = screen.getByRole( "heading", { level: 1, name: /{{pascalCase name}} Component/i });
+
+  expect(titleElement).toBeInTheDocument();
+});
